@@ -72,3 +72,19 @@ show(location.hash.slice(1),false);
 })();
 </script>
 </body></html>
+<audio id="bgm" src="music.mp3" loop preload="none"></audio>
+<button id="musicBtn" aria-label="Musiqa">🔇</button>
+<style>
+#musicBtn{position:fixed;top:16px;right:16px;width:52px;height:52px;border-radius:50%;
+border:2px solid #D9B36A;background:#090909;color:#D9B36A;font-size:24px;z-index:9999;cursor:pointer}
+</style>
+<script>
+(function(){
+  var a=document.getElementById('bgm'), b=document.getElementById('musicBtn');
+  a.volume=1;
+  b.addEventListener('click',function(){
+    if(a.paused){ a.play().then(function(){b.textContent='🔊';}).catch(function(){}); }
+    else { a.pause(); b.textContent='🔇'; }
+  });
+})();
+</script>
