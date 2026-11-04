@@ -98,7 +98,7 @@ border:2px solid #D9B36A;background:#090909;color:#D9B36A;font-size:24px;z-index
 <script>
 (function(){
   var a=document.getElementById('bgm'), b=document.getElementById('musicBtn');
-  a.volume=1;
+  a.volume=0.5;
   b.addEventListener('click',function(){
     if(a.paused){ a.play().then(function(){b.textContent='🔊';}).catch(function(){}); }
     else { a.pause(); b.textContent='🔇'; }
