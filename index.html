@@ -69,7 +69,7 @@ footer a{color:var(--gold);text-decoration:none;font-weight:700}footer p{margin:
 #intro .g1 img:nth-child(1){animation-delay:1.9s}#intro .g1 img:nth-child(2){animation-delay:2.05s}#intro .g1 img:nth-child(3){animation-delay:2.2s}
 #intro .g2 img{height:clamp(52px,10vh,84px);max-width:21vw}
 #intro .g2 img:nth-child(1){animation-delay:3.2s}#intro .g2 img:nth-child(2){animation-delay:3.33s}#intro .g2 img:nth-child(3){animation-delay:3.46s}#intro .g2 img:nth-child(4){animation-delay:3.59s}
-#intro .sk{position:absolute;bottom:22px;color:#666;font-size:12px;opacity:0;animation:iUp .5s ease 3.4s forwards}
+#intro .sk{position:absolute;bottom:26px;color:#d6b36a;font-size:14px;font-weight:700;letter-spacing:1px;opacity:0;animation:iUp .5s ease 2s forwards,iBlink 1.6s ease-in-out 2.6s infinite}@keyframes iBlink{50%{opacity:.35}}
 @keyframes iLogo{to{opacity:1;transform:scale(1)}}
 @keyframes iLine{to{width:min(240px,60vw)}}
 @keyframes iUp{to{opacity:1;transform:none}}
@@ -78,7 +78,7 @@ footer a{color:var(--gold);text-decoration:none;font-weight:700}footer p{margin:
 @media(max-height:560px){#intro .lg{width:90px}#intro .grp{margin-top:8px}}
 @media(prefers-reduced-motion:reduce){#intro{display:none!important}}
 </style></head><body>
-<div id="intro" role="presentation"><img class="lg" alt="REAL BURGER" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><div class="ln"></div><div class="nw">🔥 YANGILIK</div><div class="grp g1"><div class="kv">KVADRO <b>PITSA</b></div><div class="rw"></div></div><div class="grp g2"><div class="kv">MEAT BOX <b>&amp;</b> CHICKEN BOX</div><div class="rw"></div></div><div class="sk">Davom etish uchun bosing</div></div>
+<div id="intro" role="presentation"><img class="lg" alt="REAL BURGER" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><div class="ln"></div><div class="nw">🔥 YANGILIK</div><div class="grp g1"><div class="kv">KVADRO <b>PITSA</b></div><div class="rw"></div></div><div class="grp g2"><div class="kv">MEAT BOX <b>&amp;</b> CHICKEN BOX</div><div class="rw"></div></div><div class="sk">👆 Menyuga o‘tish uchun ekranga bosing</div></div>
 <script>
 (function(){
 var el=document.getElementById('intro'),seen=false;
@@ -94,7 +94,7 @@ var done=false;
 function close(){if(done)return;done=true;try{sessionStorage.setItem('introSeen','1')}catch(e){}
  el.classList.add('out');document.documentElement.style.overflow='';setTimeout(function(){el.remove()},800)}
 el.addEventListener('click',close);
-setTimeout(close,5200);
+document.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '||e.key==='Escape')close()});
 })();
 </script>
 
